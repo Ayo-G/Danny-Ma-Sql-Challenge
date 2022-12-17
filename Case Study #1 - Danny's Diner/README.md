@@ -15,11 +15,11 @@ Danny wants to use the data to answer a few simple questions about his customers
 
 ## Datasets
 Danny has shared with you 3 key datasets for this case study:
-- [sales]()
-- [menu]()
-- [members]()
+- [sales](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/blob/main/Case%20Study%20%231%20-%20Danny's%20Diner/datasets/sales.csv)
+- [menu](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/blob/main/Case%20Study%20%231%20-%20Danny's%20Diner/datasets/menu.csv)
+- [members](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/blob/main/Case%20Study%20%231%20-%20Danny's%20Diner/datasets/members.csv)
 
-The datasets can be found [here]() alongside the [dannys_diner database schema]() <br>
+The datasets can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner/datasets) alongside the [dannys_diner database schema]() <br>
 You can inspect the entity relationship diagram below
   ### Entity Relationship Diagram (ERD)
  
