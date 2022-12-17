@@ -13,7 +13,7 @@ This repo contains my attempts at solving the case study questions in Danny Ma's
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Case Study #1 - Danny's Diner
-- The case study can be found [here](https://8weeksqlchallenge.com/case-study-1/) while my attempt at solving it can be found [here]()
+- The case study can be found [here](https://8weeksqlchallenge.com/case-study-1/) while my attempt at solving it can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner)
 
 ----------------------------------
 
