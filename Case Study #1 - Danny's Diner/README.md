@@ -1,10 +1,10 @@
 # 🍽 Case Study #1 - Danny's Diner 
 
 ## Table of Contents
-- [Problem Statement]()
-- [Entity Relationship Diagram (ERD)]()
-  - [Datasets]()
-- [Case Study Questions]()
+- [Problem Statement](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner#problem-statement)
+- [Datasets]()
+  - [Entity Relationship Diagram]()
+- [Case Study Questions](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner#case-study-questions)
 
 ---------------------------------
 
