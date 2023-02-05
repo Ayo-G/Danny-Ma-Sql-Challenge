@@ -1,15 +1,9 @@
 # 🍕 Case Study #2 - Pizza Runner
 
 ## Table of Contents
-- [Problem Statement](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#problem-statement)
 - [Datasets](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#datasets)
   - [Entity Relationship Diagram](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#entity-relationship-diagram-erd)
 - [Case Study Questions](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#case-study-questions)
-
----------------------------------
-
-## Problem Statement
-Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. Having this deeper connection with his customers will help him deliver a better and more personalised experience for his loyal customers.
 
 ---------------------------------
 
