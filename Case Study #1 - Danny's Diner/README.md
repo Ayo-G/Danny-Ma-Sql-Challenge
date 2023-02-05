@@ -1,15 +1,9 @@
 # 🍽 Case Study #1 - Danny's Diner 
 
 ## Table of Contents
-- [Introduction](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/edit/main/Case%20Study%20%231%20-%20Danny's%20Diner/README.md#introduction)
 - [Datasets](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner#datasets)
   - [Entity Relationship Diagram](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner#entity-relationship-diagram-erd)
 - [Case Study Questions](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner#case-study-questions)
-
----------------------------------
-
-## Introduction
-Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. Having this deeper connection with his customers will help him deliver a better and more personalised experience for his loyal customers.
 
 ---------------------------------
 
