@@ -1,10 +1,10 @@
 # 🍕 Case Study #2 - Pizza Runner
 
 ## Table of Contents
-- [Problem Statement]()
-- [Datasets]()
-  - [Entity Relationship Diagram]()
-- [Case Study Questions]()
+- [Problem Statement](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#problem-statement)
+- [Datasets](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#datasets)
+  - [Entity Relationship Diagram](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#entity-relationship-diagram-erd)
+- [Case Study Questions](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#case-study-questions)
 
 ---------------------------------
 
@@ -15,12 +15,12 @@ Danny wants to use the data to answer a few simple questions about his customers
 
 ## Datasets
 Danny has shared with you 6 key datasets for this case study:
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [runners]()
+- [customer_orders]()
+- [runner_orders]()
+- [pizza_names]()
+- [pizza_recipes]()
+- [pizza_toppings]()
 
 The datasets can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner/datasets) alongside the [pizza runner database schema](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/datasets/case-study-2-schema.sql) <br>
 You can inspect the entity relationship diagram below
