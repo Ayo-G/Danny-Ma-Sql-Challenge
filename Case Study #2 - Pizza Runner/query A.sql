@@ -6,12 +6,29 @@ Pizza Metrics
 ------------ */
 
 --- How many pizzas were ordered?
+SELECT
+  count(order_id) as total_order
+FROM
+  p_r.customer_orders
 
 
 --- How many unique customer orders were made?
+select
+  count(distinct order_id) as total_unique_order
+from
+  p_r.customer_orders
 
 
 --- How many successful orders were delivered by each runner?
+select
+  runner_id,
+  count(order_id) as successful_orders
+from
+  p_r.runner_orsers
+where
+  cancellation is null
+group by
+  runner_id
 
 
 --- How many of each type of pizza was delivered?
