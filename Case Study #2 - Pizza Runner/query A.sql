@@ -33,9 +33,35 @@ group by
 
 --- How many of each type of pizza was delivered?
 
+select
+  pizza_name,
+  count(c.pizza_id) as pizza_type
+from
+  p_r.customer_orders c
+left join
+  p_r.pizza_names p
+on
+  p.pizza_id = c.pizza_id
+group by
+  1
+
 
 --- How many Vegetarian and Meatlovers were ordered by each customer?
 
+select
+  customer_id,
+  pizza_name,
+  count(c.pizza_id) as pizza_type
+from
+  p_r.customer_orders c
+left join
+  p_r.pizza_names p
+on
+  p.pizza_id = c.pizza_id
+group by
+  1, 2
+order by
+  1
 
 
 --- What was the maximum number of pizzas delivered in a single order?
