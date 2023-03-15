@@ -66,7 +66,7 @@ order by
 
 --- What was the maximum number of pizzas delivered in a single order?
 
-select
+
 
 --- For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
 
