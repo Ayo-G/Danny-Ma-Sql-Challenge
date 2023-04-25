@@ -5,79 +5,79 @@ SQL Enviroment --- Google BigQuery
 Pizza Metrics
 ------------ */
 
---- How many pizzas were ordered?
+--- How many pizzAS were ordered?
 SELECT
-  count(order_id) as total_order
+  COUNT(order_id) AS total_order
 FROM
   p_r.customer_orders
 
 
 --- How many unique customer orders were made?
-select
-  count(distinct order_id) as total_unique_order
-from
+SELECT
+  COUNT(distinct order_id) AS total_unique_order
+FROM
   p_r.customer_orders
 
 
 --- How many successful orders were delivered by each runner?
-select
+SELECT
   runner_id,
-  count(order_id) as successful_orders
-from
+  COUNT(order_id) AS successful_orders
+FROM
   p_r.runner_orsers
-where
-  cancellation is null
-group by
+WHERE
+  cancellatiON IS NULL
+GROUP BY
   runner_id
 
 
---- How many of each type of pizza was delivered?
+--- How many of each type of pizza wAS delivered?
 
-select
+SELECT
   pizza_name,
-  count(c.pizza_id) as pizza_type
-from
+  COUNT(c.pizza_id) AS pizza_type
+FROM
   p_r.customer_orders c
-left join
+LEFT JOIN
   p_r.pizza_names p
-on
+ON
   p.pizza_id = c.pizza_id
-group by
+GROUP BY
   1
 
 
 --- How many Vegetarian and Meatlovers were ordered by each customer?
 
-select
+SELECT
   customer_id,
   pizza_name,
-  count(c.pizza_id) as pizza_type
-from
+  COUNT(c.pizza_id) AS pizza_type
+FROM
   p_r.customer_orders c
-left join
+LEFT JOIN
   p_r.pizza_names p
-on
+ON
   p.pizza_id = c.pizza_id
-group by
+GROUP BY
   1, 2
-order by
+ORDER BY
   1
 
 
---- What was the maximum number of pizzas delivered in a single order?
+--- What wAS the maximum number of pizzAS delivered in a single order?
+
+SELECT
+
+--- For each customer, how many delivered pizzAS had at leASt 1 change and how many had no changes?
 
 
 
---- For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
+--- How many pizzAS were delivered that had both exclusiONs and extrAS?
 
 
 
---- How many pizzas were delivered that had both exclusions and extras?
+--- What wAS the total volume of pizzAS ordered for each hour of the day?
 
 
 
---- What was the total volume of pizzas ordered for each hour of the day?
-
-
-
---- What was the volume of orders for each day of the week?
+--- What wAS the volume of orders for each day of the week?
