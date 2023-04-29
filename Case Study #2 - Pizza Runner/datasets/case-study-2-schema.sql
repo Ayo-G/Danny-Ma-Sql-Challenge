@@ -14,12 +14,12 @@ VALUES
 
 DROP TABLE IF EXISTS customer_orders;
 CREATE TABLE customer_orders (
-  "order_id" INTEGER,
-  "customer_id" INTEGER,
-  "pizza_id" INTEGER,
-  "exclusions" VARCHAR(4),
-  "extras" VARCHAR(4),
-  "order_time" TIMESTAMP
+  order_id INTEGER,
+  customer_id INTEGER,
+  pizza_id INTEGER,
+  exclusions VARCHAR(4),
+  extras VARCHAR(4),
+  order_time DATETIME2
 );
 
 INSERT INTO customer_orders
