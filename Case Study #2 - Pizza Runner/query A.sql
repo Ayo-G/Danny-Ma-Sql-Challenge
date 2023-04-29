@@ -1,5 +1,5 @@
 /* --------------------------------
-SQL Enviroment --- Google BigQuery
+SQL Enviroment --- MS SQL SERVER
 -------------------------------- */
 /* -----------
 Pizza Metrics
@@ -9,14 +9,14 @@ Pizza Metrics
 SELECT
   COUNT(order_id) AS total_order
 FROM
-  p_r.customer_orders
+ customer_orders;
 
 
 --- How many unique customer orders were made?
 SELECT
   COUNT(distinct order_id) AS total_unique_order
 FROM
-  p_r.customer_orders
+ customer_orders;
 
 
 --- How many successful orders were delivered by each runner?
@@ -24,11 +24,11 @@ SELECT
   runner_id,
   COUNT(order_id) AS successful_orders
 FROM
-  p_r.runner_orsers
+  runner_orders
 WHERE
   cancellatiON IS NULL
 GROUP BY
-  runner_id
+  runner_id;
 
 
 --- How many of each type of pizza wAS delivered?
@@ -37,13 +37,13 @@ SELECT
   pizza_name,
   COUNT(c.pizza_id) AS pizza_type
 FROM
-  p_r.customer_orders c
+ customer_orders c
 LEFT JOIN
-  p_r.pizza_names p
+  pizza_names p
 ON
   p.pizza_id = c.pizza_id
 GROUP BY
-  1
+  1;
 
 
 --- How many Vegetarian and Meatlovers were ordered by each customer?
@@ -53,31 +53,31 @@ SELECT
   pizza_name,
   COUNT(c.pizza_id) AS pizza_type
 FROM
-  p_r.customer_orders c
+ customer_orders c
 LEFT JOIN
-  p_r.pizza_names p
+  pizza_names p
 ON
   p.pizza_id = c.pizza_id
 GROUP BY
   1, 2
 ORDER BY
-  1
+  1;
 
 
---- What wAS the maximum number of pizzAS delivered in a single order?
+--- What wAS the maximum number of pizzas delivered in a single order?
 
 SELECT
 
---- For each customer, how many delivered pizzAS had at leASt 1 change and how many had no changes?
+--- For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
 
 
 
---- How many pizzAS were delivered that had both exclusiONs and extrAS?
+--- How many pizzas were delivered that had both exclusions and extras?
 
 
 
---- What wAS the total volume of pizzAS ordered for each hour of the day?
+--- What was the total volume of pizzas ordered for each hour of the day?
 
 
 
---- What wAS the volume of orders for each day of the week?
+--- What was the volume of orders for each day of the week?
