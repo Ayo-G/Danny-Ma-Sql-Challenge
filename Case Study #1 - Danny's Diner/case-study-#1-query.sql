@@ -1,5 +1,5 @@
 /* --------------------------
-Solved using Google BigQuery
+Solved using SQL SERVER
 -------------------------- */
 
 -- What is the total amount each customer spent at the restaurant?
@@ -147,7 +147,7 @@ with cte as
     select
       b.customer_id,
       m.product_name,
-      DATE_DIFF(order_date, join_date, day) as post_membership
+      DATEDIFF(day, order_date, join_date) as post_membership
     from
       menu m
     left join
@@ -190,7 +190,7 @@ with cte as
     select
       b.customer_id,
       m.product_name,
-      DATE_DIFF(order_date, join_date, day) as pre_membership
+      DATEDIFF(day, order_date, join_date) as pre_membership
     from
       menu m
     left join
@@ -234,7 +234,7 @@ with cte as
       b.customer_id,
       m.product_id,
       m.price,
-      DATE_DIFF(order_date, join_date, day) as pre_membership
+      DATEDIFF(day, order_date, join_date) as pre_membership
     from
       menu m
     left join
@@ -296,7 +296,7 @@ with cte as
     s.customer_id,
     s.product_id,
     order_date,
-    DATE_DIFF(order_date, join_date, day) as post_purchase,
+    DATEDIFF(order_date, join_date, day) as post_purchase,
     price
   from
     menu m
