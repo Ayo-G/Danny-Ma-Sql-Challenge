@@ -1,5 +1,5 @@
 /* --------------------------------
-SQL Enviroment --- Google BigQuery
+SQL Enviroment --- SQL SERVER
 -------------------------------- */
 /* ----------------------------
 Runner and Customer Experience
