@@ -8,13 +8,13 @@ select
   customer_id,
   sum(price) amount_spent
 from
-  d_m.sales s
+  sales s
 left join
-  d_m.menu m
+  menu m
 on
   s.product_id = m.product_id
 group by
-  1
+  1;
 
 
 -- How many days has each customer visited the restaurant?
@@ -23,10 +23,9 @@ select
   customer_id,
   count(distinct order_date) days_visited
 from
-  d_m.sales
+  sales
 group by
-  1
-
+  customer_id;
 
 
 -- What was the first item from the menu purchased by each customer?
@@ -39,9 +38,9 @@ with cte as
     customer_id,
     order_date
   from
-    d_m.sales s
+    sales s
   left join
-    d_m.menu m
+    menu m
   on
     s.product_id = m.product_id
 ),
@@ -70,7 +69,7 @@ group by
   customer_id,
   product_name
 order by
-  1
+  1;
 
 
 
@@ -83,9 +82,9 @@ with items as
     count(s.product_id) times_bought,
     dense_rank() over(order by count(s.product_id) desc) as rank_
   from
-    d_m.sales s
+    sales s
   left join
-    d_m.menu m 
+    menu m 
   on
     s.product_id = m.product_id
   group by
@@ -98,7 +97,7 @@ select
 from
   items
 where
-  rank_ =1
+  rank_ =1;
 
 
 -- Which item was the most popular for each customer?
@@ -110,9 +109,9 @@ with items_sales as
     product_name,
     count(s.product_id) times_bought
   from
-    d_m.sales s
+    sales s
   left join
-    d_m.menu m 
+    menu m 
   on
     s.product_id = m.product_id
   group by
@@ -137,7 +136,7 @@ from
 where
   rank_ = 1
 order by
-  1
+  1;
 
 
 -- Which item was purchased first by the customer after they became a member?
@@ -150,13 +149,13 @@ with cte as
       m.product_name,
       DATE_DIFF(order_date, join_date, day) as post_membership
     from
-      d_m.menu m
+      menu m
     left join
-      d_m.sales s
+      sales s
     on
       m.product_id = s.product_id
     left join
-      d_m.members b
+      members b
     on
       b.customer_id = s.customer_id
   ),
@@ -179,7 +178,7 @@ select
 from
   cte_ranked
 where
- rank_ = 1
+ rank_ = 1;
 
 
 
@@ -193,13 +192,13 @@ with cte as
       m.product_name,
       DATE_DIFF(order_date, join_date, day) as pre_membership
     from
-      d_m.menu m
+      menu m
     left join
-      d_m.sales s
+      sales s
     on
       m.product_id = s.product_id
     left join
-      d_m.members b
+      members b
     on
       b.customer_id = s.customer_id
   ),
@@ -222,7 +221,7 @@ select
 from
   cte_ranked
 where
-  rank_ = 1
+  rank_ = 1;
 
 
 
@@ -237,13 +236,13 @@ with cte as
       m.price,
       DATE_DIFF(order_date, join_date, day) as pre_membership
     from
-      d_m.menu m
+      menu m
     left join
-      d_m.sales s
+      sales s
     on
       m.product_id = s.product_id
     left join
-      d_m.members b
+      members b
     on
       b.customer_id = s.customer_id
   )
@@ -257,7 +256,7 @@ from
 where
   pre_membership < 0
 group by
-  1
+  1;
 
 
 
@@ -271,20 +270,20 @@ with cte as
     else 10 * price
     end as points
   from
-    d_m.menu 
+    menu 
 )
 
 select
   customer_id,
   sum(points) as total_points
 from
-  d_m.sales s
+  sales s
 left join
   cte c
 on
   s.product_id = c.product_id
 group by
-  1
+  1;
 
 
 
@@ -300,13 +299,13 @@ with cte as
     DATE_DIFF(order_date, join_date, day) as post_purchase,
     price
   from
-    d_m.menu m
+    menu m
   left join
-    d_m.sales s
+    sales s
   on
     m.product_id = s.product_id
   left join
-    d_m.members b
+    members b
   on
     b.customer_id = s.customer_id
 ),
@@ -333,4 +332,4 @@ select
 from
   cte2
 group by
-  1
+  1;
