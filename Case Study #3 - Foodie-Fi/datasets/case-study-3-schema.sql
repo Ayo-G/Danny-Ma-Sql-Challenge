@@ -1,6 +1,3 @@
-CREATE SCHEMA foodie_fi;
-SET search_path = foodie_fi;
-
 CREATE TABLE plans (
   plan_id INTEGER,
   plan_name VARCHAR(13),
