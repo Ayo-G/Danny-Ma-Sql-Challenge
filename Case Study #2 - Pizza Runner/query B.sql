@@ -1,11 +1,12 @@
 /* --------------------------------
-SQL Enviroment --- SQL SERVER
+SQL Enviroment --- MS SQL SERVER
 -------------------------------- */
 /* ----------------------------
 Runner and Customer Experience
 ---------------------------- */
 
 --- How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)
+
 
 
 
