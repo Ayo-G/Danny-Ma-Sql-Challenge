@@ -1,3 +1,10 @@
+/* --------------------------------
+SQL Enviroment --- Azure Data Studio (MS SQL Server)
+-------------------------------- */
+/* -----------------------
+Data Analysis Questions
+----------------------- */
+
 -- How many customers has Foodie-Fi ever had?
 
 SELECT
