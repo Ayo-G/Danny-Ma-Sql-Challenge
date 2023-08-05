@@ -1,5 +1,5 @@
 /* --------------------------------
-SQL Enviroment --- Google BigQuery
+SQL Enviroment --- Azure Data Studio (MS SQL Server)
 -------------------------------- */
 /* ---------------------
 Ingredient Optimisation

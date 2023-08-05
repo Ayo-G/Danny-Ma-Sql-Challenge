@@ -9,11 +9,12 @@
 
 ## Datasets
 Danny has shared with you 2 key datasets for this case study but there will be a challenge to create a new table for the Foodie-Fi team:
-- [plans]()
-- [subscriptions]()
-- [payments_new]()
+- plans
+- subscriptions
+#### New Table
+- payments_new
 
-The datasets can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%233%20-%20Foodie-Fi/datasets) alongside the [pizza runner database schema](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/blob/main/Case%20Study%20%233%20-%20Foodie-Fi/datasets/case-study-3-schema.sql) <br>
+The Foodie-Fi database schema can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/blob/main/Case%20Study%20%233%20-%20Foodie-Fi/datasets/case-study-3-schema.sql) <br>
 You can inspect the entity relationship diagram below
   ### Entity Relationship Diagram (ERD)
   
@@ -24,9 +25,9 @@ You can inspect the entity relationship diagram below
 ## Case Study Questions
 
 This case study is split into three sections:
-- an initial data understanding question
-- data analysis questions 
-- 1 single extension challenge.
+- An initial data understanding question (Customer Journey)
+- Data analysis questions 
+- 1 single extension challenge (Challenge Payment Question).
 
 ### Customer Journey
 Based off the 8 sample customers provided in the sample from the subscriptions table, write a brief description about each customer’s onboarding journey.

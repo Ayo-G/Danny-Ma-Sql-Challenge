@@ -1,11 +1,11 @@
 /* --------------------------------
-SQL Enviroment --- MS SQL SERVER
+SQL Enviroment --- Azure Data Studio (MS SQL Server)
 -------------------------------- */
 /* -----------
 Pizza Metrics
 ------------ */
 
---- How many pizzAS were ordered?
+--- How many pizzas were ordered?
 SELECT
   COUNT(order_id) AS total_order
 FROM
@@ -27,11 +27,11 @@ FROM
   runner_orders
 WHERE
   cancellation IS NULL
-GROUP BY
+GROUP BY 
   runner_id;
 
 
---- How many of each type of pizza wAS delivered?
+--- How many of each type of pizza was delivered?
 
 SELECT
   pizza_name,
@@ -42,11 +42,11 @@ LEFT JOIN
   pizza_names p
 ON
   p.pizza_id = c.pizza_id
-GROUP BY
+GROUP BY 
   pizza_name;
 
 
---- How many Vegetarian and Meatlovers were ordered by each customer?
+--- How many Vegetarian AND Meatlovers were ordered by each customer?
 
 SELECT
   customer_id,
@@ -58,10 +58,10 @@ LEFT JOIN
   pizza_names p
 ON
   p.pizza_id = c.pizza_id
-GROUP BY
+GROUP BY 
   customer_id,
   pizza_name
-ORDER BY
+ORDER BY 
   1;
 
 
@@ -74,7 +74,7 @@ WITH cte AS
     COUNT(pizza_id) as no_of_pizza
   FROM
     customer_orders
-  GROUP BY
+  GROUP BY 
     order_id
 ),
 
@@ -82,63 +82,65 @@ cte2 AS
 (
   SELECT
     RANK() OVER(ORDER BY no_of_pizza DESC) as rank_,
-    order_id
+    order_id,
+    no_of_pizza
   FROM
     cte
 )
 
 SELECT
-  order_id
+  DISTINCT no_of_pizza
 FROM
   cte2
 WHERE
   rank_ = 1;
 
 
---- For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
+--- For each customer, how many delivered pizzas had at least 1 change AND how many had no changes?
 
 with cte as 
 (
-  select
+  SELECT
     customer_id,
     pizza_id,
     case 
       when exclusions is not null then 'changed'
       else 'unchanged'
     end as order_condition
-  from 
+  FROM 
     customer_orders c
   left join 
     runner_orders r
   on 
     c.order_id = r.order_id
-  where
+  WHERE
     cancellation is null
 )
   
-select 
+SELECT 
   customer_id,
   order_condition,
-  count(pizza_id) as delivered_pizzas
-from 
+  COUNT(pizza_id) as delivered_pizzas
+
+FROM 
   cte
-group by
+GROUP BY 
   customer_id,
   order_condition
-order by
+ORDER BY 
   customer_id,
   order_condition;
 
 
---- How many pizzas were delivered that had both exclusions and extras?
+--- How many pizzas were delivered that had both exclusions AND extras?
 
-select 
-  count(pizza_id) as pizza_count
-from 
+SELECT 
+  COUNT(pizza_id) as pizza_COUNT
+FROM 
   customer_orders
-where 
+WHERE 
   exclusions is not null 
-and 
+AND 
   extras is not null; 
 
 
@@ -146,23 +148,23 @@ and
 
 with cte as
 (
-  select 
+  SELECT 
     DATEPART(hour, order_time) as hour_,
-    count(order_id) as volume
-  from 
+    COUNT(order_id) as volume
+  FROM 
     customer_orders
-  group by 
+  GROUP BY  
     order_time
 )
 
-select 
+SELECT 
   hour_,
-  sum(volume) as total_volume
-from 
+  SUM(volume) as total_volume
+FROM 
   cte
-group by
+GROUP BY 
   hour_
-order by 
+ORDER BY 
   hour_;
 
 
@@ -170,21 +172,21 @@ order by
 
 with cte as
 (
-  select 
-    DATEPART(weekday, order_time) as dow,
-    count(order_id) as volume
-  from 
+  SELECT 
+    DATEPART(weekday, order_time) as day_of_week,
+    COUNT(order_id) as volume
+  FROM 
     customer_orders
-  group by 
+  GROUP BY  
     order_time
 )
 
-select 
-  dow,
-  sum(volume) as total_volume
-from 
+SELECT 
+  day_of_week,
+  SUM(volume) as total_volume
+FROM 
   cte
-group by
-  dow
-order by 
-  dow;
+GROUP BY 
+  day_of_week
+ORDER BY 
+  day_of_week;

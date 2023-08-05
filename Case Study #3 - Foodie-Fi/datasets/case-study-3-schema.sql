@@ -1,5 +1,7 @@
-CREATE TABLE plans (
-  plan_id INTEGER,
+DROP TABLE IF EXISTS plans;
+CREATE TABLE plans 
+(
+  plan_id INTEGER PRIMARY KEY,
   plan_name VARCHAR(13),
   price DECIMAL(5,2)
 );
@@ -14,10 +16,11 @@ VALUES
   ('4', 'churn', null);
 
 
-
-CREATE TABLE subscriptions (
+DROP TABLE IF EXISTS subscriptions;
+CREATE TABLE subscriptions
+(
   customer_id INTEGER,
-  plan_id INTEGER,
+  plan_id INTEGER FOREIGN KEY REFERENCEs plans(plan_id),
   start_date DATE
 );
 

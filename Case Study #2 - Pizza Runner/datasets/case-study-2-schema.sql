@@ -1,8 +1,10 @@
 DROP TABLE IF EXISTS runners;
-CREATE TABLE runners (
-  "runner_id" INTEGER,
+CREATE TABLE runners 
+(
+  "runner_id" INTEGER PRIMARY KEY,
   "registration_date" DATE
 );
+
 INSERT INTO runners
   ("runner_id", "registration_date")
 VALUES
@@ -13,10 +15,11 @@ VALUES
 
 
 DROP TABLE IF EXISTS customer_orders;
-CREATE TABLE customer_orders (
-  order_id INTEGER,
+CREATE TABLE customer_orders 
+(
+  order_id INTEGER FOREIGN KEY REFERENCES runner_orders(order_id),
   customer_id INTEGER,
-  pizza_id INTEGER,
+  pizza_id INTEGER FOREIGN KEY REFERENCES pizza_names(pizza_id),
   exclusions VARCHAR(4),
   extras VARCHAR(4),
   order_time DATETIME2(0)
@@ -42,9 +45,10 @@ VALUES
 
 
 DROP TABLE IF EXISTS runner_orders;
-CREATE TABLE runner_orders (
-  "order_id" INTEGER,
-  "runner_id" INTEGER,
+CREATE TABLE runner_orders 
+(
+  "order_id" INTEGER PRIMARY KEY,
+  "runner_id" INTEGER FOREIGN KEY REFERENCES runners(runner_id),
   "pickup_time" DATETIME2(0),
   "distance" DECIMAL,
   "duration" INT,
@@ -67,8 +71,9 @@ VALUES
 
 
 DROP TABLE IF EXISTS pizza_names;
-CREATE TABLE pizza_names (
-  "pizza_id" INTEGER,
+CREATE TABLE pizza_names 
+(
+  "pizza_id" INTEGER PRIMARY KEY,
   "pizza_name" TEXT
 );
 INSERT INTO pizza_names
@@ -79,8 +84,9 @@ VALUES
 
 
 DROP TABLE IF EXISTS pizza_recipes;
-CREATE TABLE pizza_recipes (
-  "pizza_id" INTEGER,
+CREATE TABLE pizza_recipes 
+(
+  "pizza_id" INTEGER PRIMARY KEY,
   "toppings" TEXT
 );
 INSERT INTO pizza_recipes
@@ -91,10 +97,12 @@ VALUES
 
 
 DROP TABLE IF EXISTS pizza_toppings;
-CREATE TABLE pizza_toppings (
+CREATE TABLE pizza_toppings 
+(
   "topping_id" INTEGER,
   "topping_name" TEXT
 );
+
 INSERT INTO pizza_toppings
   ("topping_id", "topping_name")
 VALUES

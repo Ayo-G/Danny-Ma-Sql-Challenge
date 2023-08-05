@@ -1,7 +1,32 @@
+CREATE TABLE menu (
+  "product_id" INTEGER PRIMARY KEY,
+  "product_name" VARCHAR(5),
+  "price" INTEGER
+);
+
+INSERT INTO menu
+  ("product_id", "product_name", "price")
+VALUES
+  ('1', 'sushi', '10'),
+  ('2', 'curry', '15'),
+  ('3', 'ramen', '12');
+  
+
+CREATE TABLE members (
+  "customer_id" VARCHAR(1) PRIMARY KEY,
+  "join_date" DATE
+);
+
+INSERT INTO members
+  ("customer_id", "join_date")
+VALUES
+  ('A', '2021-01-07'),
+  ('B', '2021-01-09');
+
 CREATE TABLE sales (
-  "customer_id" VARCHAR(1),
+  "customer_id" VARCHAR(1) FOREIGN KEY REFERENCES members(customer_id),
   "order_date" DATE,
-  "product_id" INTEGER
+  "product_id" INTEGER FOREIGN KEY REFERENCES menu(product_id)
 );
 
 INSERT INTO sales
@@ -22,29 +47,3 @@ VALUES
   ('C', '2021-01-01', '3'),
   ('C', '2021-01-01', '3'),
   ('C', '2021-01-07', '3');
- 
-
-CREATE TABLE menu (
-  "product_id" INTEGER,
-  "product_name" VARCHAR(5),
-  "price" INTEGER
-);
-
-INSERT INTO menu
-  ("product_id", "product_name", "price")
-VALUES
-  ('1', 'sushi', '10'),
-  ('2', 'curry', '15'),
-  ('3', 'ramen', '12');
-  
-
-CREATE TABLE members (
-  "customer_id" VARCHAR(1),
-  "join_date" DATE
-);
-
-INSERT INTO members
-  ("customer_id", "join_date")
-VALUES
-  ('A', '2021-01-07'),
-  ('B', '2021-01-09');

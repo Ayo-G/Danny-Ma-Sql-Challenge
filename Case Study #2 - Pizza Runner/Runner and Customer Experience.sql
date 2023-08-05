@@ -1,5 +1,5 @@
 /* --------------------------------
-SQL Enviroment --- MS SQL SERVER
+SQL Enviroment --- Azure Data Studio (MS SQL Server)
 -------------------------------- */
 /* ----------------------------
 Runner and Customer Experience

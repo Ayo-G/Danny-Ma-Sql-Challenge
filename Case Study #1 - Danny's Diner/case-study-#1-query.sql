@@ -14,7 +14,7 @@ left join
 on
   s.product_id = m.product_id
 group by
-  1;
+  customer_id;
 
 
 -- How many days has each customer visited the restaurant?
@@ -53,9 +53,6 @@ cte2 as
     rank() over(partition by customer_id order by order_date) as rank_
   from 
     cte
-  order by
-    customer_id,
-    rank_
 )
 
 select
@@ -69,7 +66,7 @@ group by
   customer_id,
   product_name
 order by
-  1;
+  customer_id;
 
 
 
@@ -88,7 +85,7 @@ with items as
   on
     s.product_id = m.product_id
   group by
-    1
+    product_name 
 )
 
 select
@@ -115,7 +112,8 @@ with items_sales as
   on
     s.product_id = m.product_id
   group by
-    1, 2
+    customer_id,
+    product_name
 ),
 
 ranked_sales as
@@ -256,7 +254,7 @@ from
 where
   pre_membership < 0
 group by
-  1;
+  customer_id;
 
 
 
@@ -283,7 +281,7 @@ left join
 on
   s.product_id = c.product_id
 group by
-  1;
+  customer_id;
 
 
 
@@ -296,7 +294,7 @@ with cte as
     s.customer_id,
     s.product_id,
     order_date,
-    DATEDIFF(order_date, join_date, day) as post_purchase,
+    DATEDIFF(day, order_date, join_date) as post_purchase,
     price
   from
     menu m
@@ -321,7 +319,7 @@ cte2 as
   from 
     cte
   where 
-    extract(month from order_date) = 1
+    DATEPART(month, order_date) = 1
   and 
     customer_id in ('A', 'B')
 )
@@ -332,4 +330,4 @@ select
 from
   cte2
 group by
-  1;
+customer_id;
