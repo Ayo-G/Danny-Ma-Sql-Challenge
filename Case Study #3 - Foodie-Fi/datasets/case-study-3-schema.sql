@@ -2677,3 +2677,18 @@ VALUES
   ('1000', '0', '2020-03-19'),
   ('1000', '2', '2020-03-26'),
   ('1000', '4', '2020-06-04');
+
+create -- Drop a temporary table called '#customersample'
+
+IF OBJECT_ID('tempDB..#customersample', 'U') IS NOT NULL
+DROP TABLE #customersample
+GO
+
+SELECT 
+    *
+INTO #customersample
+FROM 
+    [Personal].[dbo].[subscriptions]
+WHERE
+    customer_id in (1, 2, 11, 13, 15, 16, 18, 19);
+
