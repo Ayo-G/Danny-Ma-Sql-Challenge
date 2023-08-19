@@ -17,7 +17,8 @@ The data mart database schema can be found [here]() <br>
 You can inspect the entity relationship diagram below
   ### Entity Relationship Diagram (ERD)
   
-![image]()
+![image](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/assets/110608447/6a6ca607-6be9-4630-bd3e-b0bc92493e36)
+
  
 ---------------------------------
 
@@ -61,6 +62,7 @@ Using all of the data available - how much data would have been required for eac
 #### Extra Challenge
 Data Bank wants to try another option which is a bit more difficult to implement - they want to calculate data growth using an interest calculation, just like in a traditional savings account you might have with a bank.
 
+<<<<<<< HEAD
 If the annual interest rate is set at 6% and the Data Bank team wants to reward its customers by increasing their data allocation based off the interest calculated on a daily basis at the end of each day, how much data would be required for this option on a monthly basis?
 
 Special notes:
@@ -73,3 +75,8 @@ The Data Bank team wants you to use the outputs generated from the above section
 - Using the outputs generated from the customer node questions, generate a few headline insights which Data Bank might use to market it’s world-leading security features to potential investors and customers.
 
 - With the transaction analysis - prepare a 1 page presentation slide which contains all the relevant information about the various options for the data provisioning so the Data Bank management team can make an informed decision.
+||||||| a3b3247
+#### Extension Request
+=======
+#### Extension Request
+>>>>>>> e5ea430239d487176920e94e97a0711f96a7be6b
