@@ -28,24 +28,24 @@ This repo contains my attempts at solving the case study questions in Danny Ma's
 ----------------------------------
 
 ### Case Study #4 - Data Bank
-- The case study can be found [here](https://8weeksqlchallenge.com/case-study-4/) while my attempt at solving it can be found [here]()
+- The case study can be found [here](https://8weeksqlchallenge.com/case-study-4/) while my attempt at solving it can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%234%20-%20Data%20Bank)
 
 ----------------------------------
 
 ### Case Study #5 - Data Mart
-The case study can be found [here](https://8weeksqlchallenge.com/case-study-5/) while my attempt at solving it can be found [here]()
+The case study can be found [here](https://8weeksqlchallenge.com/case-study-5/) while my attempt at solving it can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%235%20-%20Data%20Mart)
 
 -----------------------------------
 
 ### Case Study #6 - Clique Bait
-The case study can be found [here](https://8weeksqlchallenge.com/case-study-6/) while my attempt at solving it can be found [here]()
+The case study can be found [here](https://8weeksqlchallenge.com/case-study-6/) while my attempt at solving it can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%236%20-%20Clique%20Bait)
 
 -----------------------------------
 
 ### Case Study #7 - Balanced Tree Clothing Co.
-The case study can be found [here](https://8weeksqlchallenge.com/case-study-7/) while my attempt at solving it can be found [here]()
+The case study can be found [here](https://8weeksqlchallenge.com/case-study-7/) while my attempt at solving it can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%237%20-%20Balanced%20Tree%20Clothing%20Co)
 
 -----------------------------------
 
 ### Case Study #8 - Fresh Segments
-The case study can be found [here](https://8weeksqlchallenge.com/case-study-8/) while my attempt at solving it can be found [here]()
+The case study can be found [here](https://8weeksqlchallenge.com/case-study-8/) while my attempt at solving it can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%238%20-%20Fresh%20Segments)
