@@ -3,7 +3,9 @@ CREATE SCHEMA fresh_segments;
 DROP TABLE IF EXISTS fresh_segments.json_data;
 CREATE TABLE fresh_segments.json_data (raw_data JSON);
 
-CREATE TABLE fresh_segments.interest_map (
+DROP TABLE IF EXISTS fresh_segments.interest_map;
+CREATE TABLE fresh_segments.interest_map
+(
   "id" INTEGER,
   "interest_name" TEXT,
   "interest_summary" TEXT,
@@ -1228,6 +1230,8 @@ VALUES
 UPDATE fresh_segments.interest_map
 SET interest_summary = NULL
 WHERE interest_summary = '';
+
+DROP TABLE IF EXISTS fresh_segments.interest_metrics;
 
 CREATE TABLE fresh_segments.interest_metrics (
   "_month" VARCHAR(4),

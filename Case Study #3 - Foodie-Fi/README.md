@@ -1,17 +1,17 @@
-# 🥘 Case Study #3 - Foodie-Fi
+# 🥘 **Case Study #3 - Foodie-Fi**
 
-## Table of Contents
+## **Table of Contents**
 - [Datasets]()
   - [Entity Relationship Diagram]()
 - [Case Study Questions]()
 
 ---------------------------------
 
-## Datasets
+## **Datasets**
 Danny has shared with you 2 key datasets for this case study but there will be a challenge to create a new table for the Foodie-Fi team:
 - plans
 - subscriptions
-#### New Table
+#### **New Table**
 - payments_new
 
 The Foodie-Fi database schema can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/blob/main/Case%20Study%20%233%20-%20Foodie-Fi/datasets/case-study-3-schema.sql) <br>
@@ -22,19 +22,19 @@ You can inspect the entity relationship diagram below
  
 ---------------------------------
 
-## Case Study Questions
+## **Case Study Questions**
 
 This case study is split into three sections:
 - An initial data understanding question (Customer Journey)
 - Data analysis questions 
 - 1 single extension challenge (Challenge Payment Question).
 
-### Customer Journey
+### **Customer Journey**
 Based off the 8 sample customers provided in the sample from the subscriptions table, write a brief description about each customer’s onboarding journey.
 
 Try to keep it as short as possible - you may also want to run some sort of join to make your explanations a bit easier!
 
-### Data Analysis Questions
+### **Data Analysis Questions**
 - How many customers has Foodie-Fi ever had?
 
 - What is the monthly distribution of trial plan start_date values for our dataset - use the start of the month as the group by value
@@ -57,7 +57,7 @@ Try to keep it as short as possible - you may also want to run some sort of join
 
 - How many customers downgraded from a pro monthly to a basic monthly plan in 2020?
 
-### Challenge Payment Question
+### **Challenge Payment Question**
 The Foodie-Fi team wants you to create a new payments table for the year 2020 that includes amounts paid by each customer in the subscriptions table with the following requirements:
 - monthly payments always occur on the same day of month as the original start_date of any monthly paid plan
 - upgrades from basic to monthly or pro plans are reduced by the current paid amount in that month and start immediately

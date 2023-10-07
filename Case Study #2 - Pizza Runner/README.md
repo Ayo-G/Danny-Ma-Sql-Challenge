@@ -1,13 +1,13 @@
-# 🍕 Case Study #2 - Pizza Runner
+# 🍕 **Case Study #2 - Pizza Runner**
 
-## Table of Contents
+## **Table of Contents**
 - [Datasets](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#datasets)
   - [Entity Relationship Diagram](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#entity-relationship-diagram-erd)
 - [Case Study Questions](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%232%20-%20Pizza%20Runner#case-study-questions)
 
 ---------------------------------
 
-## Datasets
+## **Datasets**
 Danny has shared with you 6 key datasets for this case study:
 - runners
 - customer_orders
@@ -18,13 +18,13 @@ Danny has shared with you 6 key datasets for this case study:
 
 The pizza runner database schema can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/datasets/case-study-2-schema.sql) <br>
 You can inspect the entity relationship diagram below
-  ### Entity Relationship Diagram (ERD)
+  ### **Entity Relationship Diagram (ERD)**
   
 ![image](https://user-images.githubusercontent.com/110608447/216816461-362f96c8-dae6-4d8f-bfa0-f8650e3532be.png)
  
 ---------------------------------
 
-## Case Study Questions
+## **Case Study Questions**
 This case study has LOTS of questions - they are broken up by area of focus including:
 
 - Pizza Metrics
@@ -33,7 +33,7 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 - Pricing and Ratings
 - Bonus DML Challenges (DML = Data Manipulation Language)
 
-#### Pizza Metrics
+#### **Pizza Metrics**
 - How many pizzas were ordered?
 
 - How many unique customer orders were made?
@@ -54,7 +54,7 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 
 - What was the volume of orders for each day of the week?
 
-#### Runner and Customer Experience
+#### **Runner and Customer Experience**
 - How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)
 
 - What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?
@@ -69,7 +69,7 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 
 - What is the successful delivery percentage for each runner?
 
-#### Ingredient Optimisation
+#### **Ingredient Optimisation**
 - What are the standard ingredients for each pizza?
 
 - What was the most commonly added extra?
@@ -87,7 +87,7 @@ This case study has LOTS of questions - they are broken up by area of focus incl
     
 - What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?
 
-#### Pricing and Ratings
+#### **Pricing and Ratings**
 - If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - how much money has Pizza Runner made so far if there are no delivery fees?
 
 - What if there was an additional $1 charge for any pizza extras?
@@ -109,5 +109,5 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 
 - If a Meat Lovers pizza was $12 and Vegetarian $10 fixed prices with no cost for extras and each runner is paid $0.30 per kilometre traveled - how much money does Pizza Runner have left over after these deliveries?
 
-#### Bonus DML Challenges (DML = Data Manipulation Language)
+#### **Bonus DML Challenges (DML = Data Manipulation Language)**
 - If Danny wants to expand his range of pizzas - how would this impact the existing data design? Write an INSERT statement to demonstrate what would happen if a new Supreme pizza with all the toppings was added to the Pizza Runner menu?

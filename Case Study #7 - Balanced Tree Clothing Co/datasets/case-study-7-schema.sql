@@ -1,5 +1,6 @@
 CREATE SCHEMA balanced_tree;
 
+DROP TABLE IF EXISTS balanced_tree.product_hierarchy;
 CREATE TABLE balanced_tree.product_hierarchy (
   "id" INTEGER,
   "parent_id" INTEGER,
@@ -29,6 +30,7 @@ VALUES
   ('17', '6', 'White Striped', 'Style'),
   ('18', '6', 'Pink Fluro Polkadot', 'Style');
 
+DROP TABLE IF EXISTS balanced_tree.product_prices;
 CREATE TABLE balanced_tree.product_prices (
   "id" INTEGER,
   "product_id" VARCHAR(6),
@@ -51,6 +53,7 @@ VALUES
   ('17', 'b9a74d', '17'),
   ('18', '2feb6b', '29');
 
+DROP TABLE IF EXISTS balanced_tree.product_details;
 CREATE TABLE balanced_tree.product_details (
   "product_id" VARCHAR(6),
   "price" INTEGER,
@@ -79,12 +82,13 @@ VALUES
   ('b9a74d', '17', 'White Striped Socks - Mens', '2', '6', '17', 'Mens', 'Socks', 'White Striped'),
   ('2feb6b', '29', 'Pink Fluro Polkadot Socks - Mens', '2', '6', '18', 'Mens', 'Socks', 'Pink Fluro Polkadot');
 
+DROP TABLE IF EXISTS balanced_tree.sales;
 CREATE TABLE balanced_tree.sales (
   "prod_id" VARCHAR(6),
   "qty" INTEGER,
   "price" INTEGER,
   "discount" INTEGER,
-  "member" BOOLEAN,
+  "member" BIT,
   "txn_id" VARCHAR(6),
   "start_txn_time" TIMESTAMP
 );

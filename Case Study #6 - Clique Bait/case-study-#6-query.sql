@@ -1,51 +1,82 @@
-# 🎣 **Case Study #6 - Clique Bait**
+/* -------------------------------------------------
+SQL Enviroment --- Azure Data Studio (MS SQL Server)
+------------------------------------------------- */
+/* ----------------------------
+Enterprise Relationship Diagram
+---------------------------- */
+/*
+Using the provided DDL schema details to create an ERD for all the Clique Bait datasets.
+*/
 
-## **Table of Contents**
-- [Datasets]()
-  - [Entity Relationship Diagram]()
-- [Case Study Questions]()
+TABLE campaign_identifier 
+{
+  campaign_id integer [primary key]
+  products VARCHAR(3)
+  campaign_name VARCHAR(33)
+  start_date TIMESTAMP
+  end_date TIMESTAMP 
+}
 
----------------------------------
+TABLE page_hierarchy
+{
+  page_id INTEGER [primary key]
+  page_name VARCHAR(14)
+  product_category VARCHAR(9)
+  product_id INTEGER
+}
 
-## **Datasets**
-There is a total of 5 key datasets for this case study:
-- users
-- events
-- event_identifier
-- campaign_identifier
-- page_heirarchy
+Table users 
+{
+  user_id INTEGER
+  cookie_id VARCHAR(6)
+  start_date TIMESTAMP
+}
 
-The clique bait database schema can be found [here]() <br>
-You can inspect the entity relationship diagram below
-  ### **Entity Relationship Diagram (ERD)**
-  
-![image]()
- 
----------------------------------
+Table events 
+{
+  visit_id VARCHAR(6)
+  cookie_id VARCHAR(6)
+  page_id INTEGER
+  event_type INTEGER
+  sequence_number INTEGER
+  event_time TIMESTAMP
+}
 
-## **Case Study Questions**
-The case study questions have been broken into different areas of focus including:
+table event_identifier 
+{
+  event_type INTEGER [primary key]
+  event_name VARCHAR(13)
+}
 
-- Enterprise Relationship Diagram 
-- Digital Analysis
-- Product Funnel Analysis
-- Campaigns Analysis
+Ref: "page_hierarchy"."page_id" < "events"."page_id"
 
-#### **Enterprise Relationship Diagram**
-- Using the provided DDL schema details, create an ERD for all the Clique Bait datasets.
+Ref: "event_identifier"."event_type" < "events"."event_type"
 
-#### **Digital Analysis**
-- How many users are there?
-- How many cookies does each user have on average?
-- What is the unique number of visits by all users per month?
-- What is the number of events for each event type?
-- What is the percentage of visits which have a purchase event?
-- What is the percentage of visits which view the checkout page but do not have a purchase event?
-- What are the top 3 pages by number of views?
-- What is the number of views and cart adds for each product category?
-- What are the top 3 products by purchases?
+Ref: "users"."cookie_id" < "events"."cookie_id"
 
-#### **Product Funnel Analysis**
+Ref: "page_hierarchy"."product_id" < "campaign_identifier"."products"
+
+image.png
+
+
+/* --------------
+Digital Analysis
+-------------- */
+-- How many users are there?
+-- How many cookies does each user have on average?
+-- What is the unique number of visits by all users per month?
+-- What is the number of events for each event type?
+-- What is the percentage of visits which have a purchase event?
+-- What is the percentage of visits which view the checkout page but do not have a purchase event?
+-- What are the top 3 pages by number of views?
+-- What is the number of views and cart adds for each product category?
+-- What are the top 3 products by purchases?
+
+
+/* ---------------------
+Product Funnel Analysis
+--------------------- */
+/*
 Using a single SQL query - create a new output table which has the following details:
 
 - How many times was each product viewed?
@@ -62,8 +93,13 @@ Use your 2 new output tables - answer the following questions:
 - Which product had the highest view to purchase percentage?
 - What is the average conversion rate from view to cart add?
 - What is the average conversion rate from cart add to purchase?
+*/
 
-#### **Campaigns Analysis**
+
+/* ---------------
+Campaign Analysis
+--------------- */
+/*
 Generate a table that has 1 single row for every unique visit_id record and has the following columns:
 
 - user_id
@@ -85,3 +121,4 @@ Some ideas you might want to investigate further include:
 - Does clicking on an impression lead to higher purchase rates?
 - What is the uplift in purchase rate when comparing users who click on a campaign impression versus users who do not receive an impression? What if we compare them with users who just an impression but do not click?
 - What metrics can you use to quantify the success or failure of each campaign compared to eachother?
+*/

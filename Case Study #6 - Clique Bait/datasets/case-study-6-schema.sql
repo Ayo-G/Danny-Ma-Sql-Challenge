@@ -1,4 +1,7 @@
-CREATE TABLE clique_bait.event_identifier (
+CREATE SCHEMA clique_bait;
+
+CREATE TABLE clique_bait.event_identifier 
+(
   "event_type" INTEGER,
   "event_name" VARCHAR(13)
 );
@@ -7,8 +10,8 @@ CREATE TABLE clique_bait.campaign_identifier (
   "campaign_id" INTEGER,
   "products" VARCHAR(3),
   "campaign_name" VARCHAR(33),
-  "start_date" TIMESTAMP,
-  "end_date" TIMESTAMP
+  "start_date" DATETIME,
+  "end_date" DATETIME
 );
 
 CREATE TABLE clique_bait.page_hierarchy (
@@ -24,7 +27,7 @@ CREATE TABLE clique_bait.users (
   "start_date" TIMESTAMP
 );
 
-CREATE TABLE clique_bait.events (
+CREATE TABLE clique_bait.events ( 
   "visit_id" VARCHAR(6),
   "cookie_id" VARCHAR(6),
   "page_id" INTEGER,

@@ -1,33 +1,10 @@
-# 🏪 **Case Study #5 - Data Mart**
-
-## **Table of Contents**
-- [Datasets]()
-  - [Entity Relationship Diagram]()
-- [Case Study Questions]()
-
----------------------------------
-
-## **Datasets**
-1 dataset has been provided for this case study:
-- weekly_sales
-
-The data mart database schema can be found [here]() <br>
-You can inspect the entity relationship diagram below
-  ### **Entity Relationship Diagram (ERD)**
-  
-![image]()
- 
----------------------------------
-
-## **Case Study Questions**
-The case study questions have been broken into different areas of focus including:
-
-- Data Cleansing Steps
-- Data Exploration
-- Before and After Analysis 
-- Bonus Questions 
-
-#### **Data Cleansing Steps**
+/* --------------------------------------------------
+SQL Enviroment --- Azure Data Studio (MS SQL Server)
+-------------------------------------------------- */
+/* ------------------
+Data Cleansing Steps
+------------------ */
+/*
 In a single query, perform the following operations and generate a new table in the data_mart schema named clean_weekly_sales:
 
 - Convert the week_date to a DATE format
@@ -40,39 +17,39 @@ In a single query, perform the following operations and generate a new table in 
 
 - Add a new column called age_band after the original segment column using the following mapping on the number inside the segment value
 
-segment	- age_band
-
-1	      - Young Adults
-
-2	      - Middle Aged
-
-3 or 4	- Retirees
+segment - age_band 
+1 - Young Adults 
+2 - Middle Aged 
+3 or 4 - Retirees
 
 - Add a new demographic column using the following mapping for the first letter in the segment values:
-
-segment	- demographic
-
-C	      - Couples
-
-F	      - Families
+segment - demographic 
+C - Couples 
+F - Families
 
 - Ensure all null string values with an "unknown" string value in the original segment column as well as the new age_band and demographic columns
 
 - Generate a new avg_transaction column as the sales value divided by transactions rounded to 2 decimal places for each record
 
-#### **Data Exploration**
 
-- What day of the week is used for each week_date value?
-- What range of week numbers are missing from the dataset?
-- How many total transactions were there for each year in the dataset?
-- What is the total sales for each region for each month?
-- What is the total count of transactions for each platform
-- What is the percentage of sales for Retail vs Shopify for each month?
-- What is the percentage of sales by demographic for each year in the dataset?
-- Which age_band and demographic values contribute the most to Retail sales?
-- Can we use the avg_transaction column to find the average transaction size for each year for Retail vs Shopify? If not - how would you calculate it instead?
+/* --------------
+Data Exploration
+-------------- */
+-- What day of the week is used for each week_date value?
+-- What range of week numbers are missing from the dataset?
+-- How many total transactions were there for each year in the dataset?
+-- What is the total sales for each region for each month?
+-- What is the total count of transactions for each platform
+-- What is the percentage of sales for Retail vs Shopify for each month?
+-- What is the percentage of sales by demographic for each year in the dataset?
+-- Which age_band and demographic values contribute the most to Retail sales?
+-- Can we use the avg_transaction column to find the average transaction size for each year for Retail vs Shopify? If not - how would you calculate it instead?
 
-#### **Before and After Analysis**
+
+/* -----------------------
+Before and after Analysis
+----------------------- */
+/*
 This technique is usually used when we inspect an important event and want to inspect the impact before and after a certain point in time.
 
 Taking the week_date value of 2020-06-15 as the baseline week where the Data Mart sustainable packaging changes came into effect.
@@ -81,11 +58,15 @@ We would include all week_date values for 2020-06-15 as the start of the period 
 
 Using this analysis approach - answer the following questions:
 
-- What is the total sales for the 4 weeks before and after 2020-06-15? What is the growth or reduction rate in actual values and percentage of sales?
+- What is the total sales for the 4 weeks before and after 2020-06-15? - What is the growth or reduction rate in actual values and percentage of sales?
 - What about the entire 12 weeks before and after?
 - How do the sale metrics for these 2 periods before and after compare with the previous years in 2018 and 2019?
+*/
 
-#### **Bonus Questions**
+/* -------------
+Bonus Questions
+------------- */
+/*
 Which areas of the business have the highest negative impact in sales metrics performance in 2020 for the 12 week before and after period?
 
 - region
@@ -93,3 +74,4 @@ Which areas of the business have the highest negative impact in sales metrics pe
 - age_band
 - demographic
 - customer_type
+*/

@@ -1,4 +1,4 @@
-# 🍽 Case Study #1 - Danny's Diner 
+# 🍽 **Case Study #1 - Danny's Diner**
 
 ## Table of Contents
 - [Datasets](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/tree/main/Case%20Study%20%231%20-%20Danny's%20Diner#datasets)
@@ -7,7 +7,7 @@
 
 ---------------------------------
 
-## Datasets
+## **Datasets**
 Danny has shared with you 3 key datasets for this case study:
 - sales
 - menu
@@ -15,13 +15,13 @@ Danny has shared with you 3 key datasets for this case study:
 
 The dannys_diner database schema can be found [here](https://github.com/Ayo-G/Danny-Ma-Sql-Challenge/blob/main/Case%20Study%20%231%20-%20Danny's%20Diner/datasets/case-study-1-schema.sql) <br>
 You can inspect the entity relationship diagram below
-  ### Entity Relationship Diagram (ERD)
+  ### **Entity Relationship Diagram (ERD)**
  
   ![image](https://user-images.githubusercontent.com/110608447/208236784-078c4300-122b-432d-887f-cc143a2c32a1.png)
 
 ---------------------------------
 
-## Case Study Questions
+## **Case Study Questions**
 - What is the total amount each customer spent at the restaurant?
 
 - How many days has each customer visited the restaurant?
