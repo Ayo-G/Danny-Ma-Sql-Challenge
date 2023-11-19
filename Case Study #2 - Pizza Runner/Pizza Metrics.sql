@@ -9,7 +9,7 @@ Pizza Metrics
 SELECT
   COUNT(order_id) AS total_order
 FROM
- customer_orders;
+  customer_orders;
 
 
 --- How many unique customer orders were made?
@@ -37,7 +37,7 @@ SELECT
   pizza_name,
   COUNT(c.pizza_id) AS pizza_type
 FROM
- customer_orders c
+  customer_orders c
 LEFT JOIN
   pizza_names p
 ON
